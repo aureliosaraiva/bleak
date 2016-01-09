@@ -1,0 +1,122 @@
+{{!< default}}
+
+<header id="header" class="header{{#if @blog.cover}} has-cover{{/if}}">
+    <div class="inner">
+        <a class="header-title" href="{{@blog.url}}">
+            <img class="header-logo" src="{{@blog.logo}}" alt="Logo" />
+            <h1 class="header-name">{{@blog.title}}</h1>
+            {{#if @blog.description}}
+                <span class="header-description">{{@blog.description}}</span>
+                <span class="header-subdescription">Livrio facilita e torna mais seguro o empréstimo de livros</span>
+            {{/if}}
+        </a>
+            
+
+            <ul class="social">
+              <li><a href="https://twitter.com/livrioapp" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/livrio" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://google.com/+LivrIoapp" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        
+    </div>
+    {{#if @blog.cover}}
+    <div class="header-cover" style="background-image: url({{@blog.cover}})"></div>
+    {{/if}}
+
+</header>
+
+<div class="header-store">
+    <a href="https://play.google.com/store/apps/details?id=io.livr.app&utm_source=site&utm_medium=link&utm_content=footer&utm_campaign=FooterSite"><img alt="Baixe na Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/pt-br-play-badge.png"></a>
+
+    <a href="https://itunes.apple.com/us/app/livrio/id1053466697?l=pt&ls=1&mt=8&utm_source=site&utm_medium=link&utm_content=footer&utm_campaign=FooterSite"><img alt="Baixe na Apple Store" src="{{asset "img/apple.png"}}"></a>
+</div>
+
+
+
+<Br clear="all" />
+<div class="container feature">
+
+<h2 class="t">Como funciona?</h2>
+<div class="row">
+          <div class="col-md-7" style="    padding-top: 20px;"> 
+            <!--app features container-->
+            <div class="features-container">
+              <div class="app-features row">
+                <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="{{asset "img/icon-1.png"}}" alt="App Features"></div>
+                <div class="col-md-8 col-sm-9 col-xs-9">
+                  <h4 style="
+">Cadastre seus livros incríveis com um toque</h4>
+                  <p>Escaneie o código de barras com o app e pronto. Você já pode emprestar e compartilhar seus livros.</p>
+                </div>
+              </div>
+              <div class="app-features row">
+                <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="{{asset "img/icon-2.png"}}" alt="App Features"></div>
+                <div class="col-md-8 col-sm-9 col-xs-9">
+                  <h4>Encontre livros que merecem ser lidos</h4>
+                  <p>Peça emprestado os livros dos seus amigos que estão parados na estante.</p>
+                </div>
+              </div>
+              <div class="app-features row">
+                <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="{{asset "img/icon-3.png"}}" alt="App Features"></div>
+                <div class="col-md-8 col-sm-9 col-xs-9">
+                  <h4>Saiba com quem está e quando eles voltam</h4>
+                  <p>Aprove, empreste e combine um prazo. Livrio avisa a hora da devolução e te ajuda a manter a amizade.</p>
+                </div>
+              </div>
+              <div class="app-features row">
+                <div class="col-md-3 col-md-offset-1 col-sm-3 col-xs-3 text-center"><img src="{{asset "img/icon-4.png"}}" alt="App Features"></div>
+                <div class="col-md-8 col-sm-9 col-xs-9">
+                  <h4>Os melhores livros. E sem pagar nada por isso</h4>
+                  <p>Não gaste dinheiro para ler os livros que você quer. Livros compartilhados são mais amados.</p>
+                </div>
+              </div>
+            </div>
+            <!--app features container end--> 
+            
+          </div>
+          <div class="col-md-5 text-center"> <img src="{{asset "img/feature-2.png"}}" alt="App Feature img"> 
+
+          </div>
+        </div>
+
+</div>
+
+<div class="header-store">
+    <a href="https://play.google.com/store/apps/details?id=io.livr.app&utm_source=site&utm_medium=link&utm_content=footer&utm_campaign=FooterSite"><img alt="Baixe na Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/pt-br-play-badge.png"></a>
+
+    <a href="https://itunes.apple.com/us/app/livrio/id1053466697?l=pt&ls=1&mt=8&utm_source=site&utm_medium=link&utm_content=footer&utm_campaign=FooterSite"><img alt="Baixe na Apple Store" src="{{asset "img/apple.png"}}"></a>
+</div>
+
+<div class="container blog">
+<h2 class="t">Nosso blog</h2>
+<div class="post-list">
+
+<div id="push">
+
+{{#foreach posts}}
+
+<article class="{{post_class}}">
+    <div class="inner">
+        <a class="post-link" href="{{url absolute="true"}}"></a>
+        {{#if image}}
+        <figure class="post-image">
+            <a href="{{url absolute="true"}}"><img src="{{image}}" alt="" /></a>
+        </figure>
+        {{/if}}
+        <span class="post-meta">
+            <span class="post-date">{{date format="DD MMM YYYY"}}</span>
+        </span>
+        <h2 class="post-title"><a href="{{url absolute="true"}}">{{{title}}}</a></h2>
+        <p class="post-excerpt">{{excerpt words="15"}}&hellip;</p>
+        <span class="post-more"><a href="{{url absolute="true"}}">Leia mais <i class="icon-arrow-right"></i></a></span>
+    </div>
+</article>
+
+{{/foreach}}
+
+</div>
+
+</div>
+
+
+</div>

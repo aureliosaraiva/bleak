@@ -3,6 +3,7 @@
 <header id="header" class="header{{#if @blog.cover}} has-cover{{/if}}">
     <div class="inner">
         <a class="header-title" href="{{@blog.url}}">
+            <img class="header-logo" src="{{@blog.logo}}" alt="Logo" />
             <h1 class="header-name">{{@blog.title}}</h1>
             {{#if @blog.description}}
                 <span class="header-description">{{@blog.description}}</span>
@@ -15,6 +16,8 @@
 </header>
 
 <div id="post-index" class="container">
+
+    
 
     <main class="content" role="main">
     
