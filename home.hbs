@@ -1,6 +1,6 @@
 {{!< default}}
 
-<header id="header" class="header{{#if @blog.cover}} has-cover{{/if}}">
+<header id="header" class="header has-cover">
     <div class="inner">
         <a class="header-title" href="{{@blog.url}}">
             <img class="header-logo" src="{{@blog.logo}}" alt="Logo" />
@@ -19,9 +19,7 @@
             </ul>
         
     </div>
-    {{#if @blog.cover}}
-    <div class="header-cover" style="background-image: url({{@blog.cover}})"></div>
-    {{/if}}
+    <div class="header-cover" style="background-image: url({{asset "img/banner.jpg"}})"></div>
 
 </header>
 
