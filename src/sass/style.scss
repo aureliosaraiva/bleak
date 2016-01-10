@@ -64,11 +64,11 @@ a {
 	}
 }
 .post-content a {
-	border-bottom: 2px solid $color-primary-default;
+	
 
 	&:hover,
 	&:focus {
-		border-color: $color-primary-active;
+		border-bottom: 2px solid $color-primary-default;border-color: $color-primary-active;
 	}
 }
 
