@@ -1940,18 +1940,17 @@ h2.t {
     }
 }
 
-.fb-like { top: -45px; }
+.fb-like { top: -47px; }
 .social-share {
     padding: 0;
     margin: 0;
     li {
-        margin: 20px 0;
+        margin-top: 20px;
         text-align: left;
         &:before{
             content: ''
         }
         margin-right: 10px;
-        float: left;
         display: inline-block;
     }
 }
