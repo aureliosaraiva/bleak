@@ -417,6 +417,7 @@ body {
 	max-width: 48em;
 	margin: 0 auto;
 	padding: 0 1em;
+    padding-top: 50px;
 }
 
 
@@ -540,7 +541,8 @@ body {
 #nav {
 	position: fixed;
     width: 100%;
-    background: transparent;
+    background-color: #202222;
+    border-bottom: 4px solid #F9AF00;
 	z-index: 70;
 	transition: all ease-out 0.4s;
 	transform: translate3d(0,0,0);
@@ -1893,6 +1895,10 @@ h2.t {
 }
 
 .home-template {
+    #nav{
+        background: transparent;
+        border: none;
+    }
     hr {
             border-top: 1px solid #F9AF00;
     }

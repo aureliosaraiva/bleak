@@ -23,7 +23,10 @@
 <body class="{{body_class}}">
 	<section id="wrapper">
 		<div id="ajax-container">
-			<nav id="nav" class="nav">
+
+        
+			<nav id="nav" class="nav ">
+            <div class="container">
 				<div class="nav-logo">
 					<a href="{{@blog.url}}">
 					   <img src="{{@blog.logo}}" alt="Logo" /> <span class="name">{{@blog.title}}</span>
@@ -34,7 +37,9 @@
 					<a class="menu" data-action="menu" data-target="menu"><i class="icon-menu"></i></a>
 					{{/if}}
 				</div>
-			</nav>			
+                </div>  
+			</nav>		
+        
 			{{{body}}}
 			<div id="body-class" style="display: none;" class="{{body_class}}"></div>
 
