@@ -15,12 +15,64 @@
 
 	<link rel="stylesheet" type="text/css" href="{{asset "css/dependencies.css"}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+
+<link rel="shortcut icon" href="{{asset "img/favicon.png"}}"> 
+<link rel="apple-itouch-icon" href="{{asset "img/favicon.png"}}">
+
+<link rel="canonical" href="http://livr.io">
+
+ 
+
+
+ 
+
+
+{{! Facebook OpenGraph }}
+    <meta property="og:site_name" content="{{@blog.title}}">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="fb:admins" content="aureliosaraiva">
+    <meta property="fb:app_id" content="708951699200694">
+
+    {{#if post}}
+        {{#post}}
+            <meta property="og:type" content="article">
+            <meta property="article:published_time" content="{{date format='YYYY-MM-DD, hh:mm:ss'}}">
+            <meta property="og:url" content="{{url absolute='true'}}" />
+            <meta property="og:title" content="{{{title}}}" />
+            <meta property="og:description" content="{{excerpt}}" />
+            {{#if image}}
+            <meta property="og:image" content="{{image absolute='true'}}" />
+            {{/if}}
+            
+        {{/post}}
+    {{else}}
+        <meta property="og:title" content="Livrio - Organize e compartilhe livros com seus amigos">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{@blog.url}}" />
+        <meta property="og:description" content="Livrio - Organize e compartilhe livros que você ama com quem também ama livrios" />
+        <meta property="og:image" content="{{asset "img/banner_facebook.png"}}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="800">
+        <meta property="og:image:height" content="800">
+    {{/if}}
     
 
 	{{ghost_head}}
 </head>
 
 <body class="{{body_class}}">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=708951699200694";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'pt-BR'}
+</script>
 	<section id="wrapper">
 		<div id="ajax-container">
 
@@ -68,9 +120,9 @@
                 <div class="col-md-4">
                     <h2>Sobre nós</h2>
                     <ul class="footer-social">
-                        <li><a href="#">Sobre o Livrio</a></li>
-                        <li><a href="#">Nosso blog</a></li>
-                        <li><a href="#">Imprensa</a></li>
+                        <li><a href="/sobre">Sobre o Livrio</a></li>
+                        <li><a href="/blog">Nosso blog</a></li>
+                        <li><a href="/imprensa">Imprensa</a></li>
                         <li><a href="#">Dúvidas frequentes</a></li>
                         <li><a href="#">Termos de uso</a></li>
                         <li><a href="#">Politica de privacidade</a></li>
