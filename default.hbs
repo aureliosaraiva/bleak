@@ -19,44 +19,12 @@
 
 <link rel="shortcut icon" href="{{asset "img/favicon.png"}}"> 
 <link rel="apple-itouch-icon" href="{{asset "img/favicon.png"}}">
-
-<link rel="canonical" href="http://livr.io">
-
  
 
 
- 
-
-
-{{! Facebook OpenGraph }}
-    <meta property="og:site_name" content="{{@blog.title}}">
     <meta property="og:locale" content="pt_BR">
     <meta property="fb:admins" content="aureliosaraiva">
     <meta property="fb:app_id" content="708951699200694">
-
-    {{#if post}}
-        {{#post}}
-            <meta property="og:type" content="article">
-            <meta property="article:published_time" content="{{date format='YYYY-MM-DD, hh:mm:ss'}}">
-            <meta property="og:url" content="{{url absolute='true'}}" />
-            <meta property="og:title" content="{{{title}}}" />
-            <meta property="og:description" content="{{excerpt}}" />
-            {{#if image}}
-            <meta property="og:image" content="{{image absolute='true'}}" />
-            {{/if}}
-           
- http://localhost:2368        {{/post}}
-    {{else}}
-        <meta property="og:title" content="Livrio - Organize e compartilhe livros com seus amigos">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="{{@blog.url}}" />
-        <meta property="og:description" content="Livrio - Organize e compartilhe livros que você ama com quem também ama livrios" />
-        <meta property="og:image" content="{{asset "img/banner_facebook.png"}}">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="800">
-        <meta property="og:image:height" content="800">
-    {{/if}}
-    
 
 	{{ghost_head}}
 </head>
@@ -113,7 +81,7 @@
                     <span>{{@blog.title}}</span>
                 </div>
                 <div class="footer-about">
-                    Livrio é um aplicativo que ajuda você a localizar livros que seus amigos tem. Cadastre seus livros com um toque e empreste com mais segurança, sabendo com quem eles estão e quando eles voltam. Livrio avisa a hora da devolução e te ajuda a manter a amizade.
+                    O Livrio é um aplicativo para compartilhar os livros que você ama com os seus amigos. Ele te ajuda a tornar mais fácil e seguro o empréstimo de livros. Acreditamos que os livros quando livres, são mais felizes. Faça parte desta comunidade!
                 </div>
                 </div>
                 <div class="col-md-1"></div>
