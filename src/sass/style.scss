@@ -1054,6 +1054,11 @@ body {
                 margin: 0px 20px;
             }
         }
+
+        &.faixa{
+            background-color: #F7AF1A;
+                padding: 70px 0px;
+        }
     }
 
 
@@ -1892,7 +1897,21 @@ h2.t {
     position: relative;
     margin: 50px 0;
     text-align: center;
+    font-size: 48px;
+    font-family: 'Roboto Slab', serif;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 120px;
+        margin-left: -60px;
+        left: 50%;
+        bottom: -8px;
+        background: #F7B01A;
+    }
 }
+
 
 .home-template {
     #nav{
